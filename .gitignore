@@ -1,0 +1,70 @@
+# ==============================================================================
+# SEGREDOS (CRÍTICO)
+# ==============================================================================
+# Credenciais Wi-Fi/MQTT. Versionar apenas o modelo: main/include/secrets_example.h
+secrets.h
+.env
+.env.*
+# Chaves privadas (certificados CA públicos podem ser versionados)
+*.key
+*_key.pem
+*-key.pem
+
+# ==============================================================================
+# ESP-IDF / BUILD
+# ==============================================================================
+build/
+managed_components/
+sdkconfig.old
+flasher_args.json
+compile_commands.json
+*.o
+*.a
+*.elf
+*.bin
+*.map
+
+# Observação: 'sdkconfig' É versionado de propósito (não há sdkconfig.defaults).
+# Observação: 'dependencies.lock' deve ser versionado (builds reproduzíveis).
+
+# ==============================================================================
+# IDES E FERRAMENTAS
+# ==============================================================================
+# VS Code (preferências locais: caminhos absolutos, porta serial, depuração)
+.vscode/
+*.code-workspace
+
+# Dev Container (não utilizado no projeto)
+.devcontainer/
+.history/
+
+# clangd: ignora apenas o cache (o arquivo .clangd é configuração e deve ser versionado)
+.cache/
+
+# JetBrains / Eclipse
+.idea/
+cmake-build-*/
+.project
+.cproject
+.settings/
+
+# ==============================================================================
+# SISTEMA OPERACIONAL E TEMPORÁRIOS
+# ==============================================================================
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+.directory
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Python (scripts auxiliares)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
